@@ -8,6 +8,7 @@ import MovieDetail from './components/movie-detail/movieDetail';
 import NotFound from './components/404/notFound';
 
 function App() {
+  
   return (
     <div className="App">
     <Header />
