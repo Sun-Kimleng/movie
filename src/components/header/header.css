@@ -1,0 +1,33 @@
+:root{
+    --black: #042f40;
+}
+.header{
+    z-index: 1;
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.navbar{
+    justify-content: end;
+    display: flex;
+}
+
+.link{
+    
+    color: #eb6b09;
+    text-decoration: none;
+    background-color: var(--black);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2px;
+    padding:18px 40px;
+}
+.link:hover{
+   opacity: 0.8;
+}

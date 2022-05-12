@@ -40,7 +40,7 @@ function App() {
 
   const bodyVariant ={
     leftBarOpen: {
-      marginLeft: isOpen ? 310 : 30,
+      marginLeft: isOpen ? 310 : 60,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -49,7 +49,7 @@ function App() {
     },
 
     leftBarOff: {
-      marginLeft: 30,
+      marginLeft: 60,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -59,7 +59,7 @@ function App() {
 
   const leftBarVariant = {
     show: {
-      width: isOpen ? 300 : 30,
+      width: isOpen ? 300 : 50,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -68,7 +68,7 @@ function App() {
     },
 
     hide: {
-      width: 30,
+      width: 50,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -78,7 +78,7 @@ function App() {
     exit:{
       scale: 0,
       transition :{
-        duration: 0.5,
+        duration: 0.1,
         type: 'spring',
       }
     },
@@ -86,6 +86,7 @@ function App() {
     visible: {
       scale: 1,
       transition :{
+        
         duration: 1,
         type: 'tween',
       }
@@ -94,7 +95,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+          <Header />
       <div className="content">
     
       <motion.div className="left-bar"
@@ -146,7 +147,7 @@ function App() {
        
         </motion.div>
       </div>
-
+  
       <Footer />
     </div>
   );

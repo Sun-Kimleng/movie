@@ -3,6 +3,11 @@
 *{
   font-family: 'Montserrat', sans-serif;
 }
+
+:root{
+  --black: #042f40;
+}
+
 .content{
   display: flex;
   flex-direction: row;
@@ -10,17 +15,19 @@
 }
 
 .left-bar{
+  top:10px;
   height: 100vh;
   width: 20%;
   position: fixed;
-  background-color: white;
+  background-color: #eb6b09;
+ 
   
 }
 
 .body{
   height: 100vh;
   flex: 1;
-  background-color: red;
+  
 }
 
 .Icon{
@@ -33,8 +40,8 @@
 }
 
 .listIcon{
-
-  font-size: 30px;
+  margin-right: 11px;
+  font-size: 25px;
   width: 30px;
 }
 
@@ -46,12 +53,21 @@
 .list{
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  height: 60px;
+  height: 20px;
+
+  padding: 20px 13px;
   text-decoration: none;
   color: black;
+ 
 }
 .title{
   margin-left: 20px;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.active{
+  background-color: orange;
+}
+.body{
+  margin-top: 50px;
 }
