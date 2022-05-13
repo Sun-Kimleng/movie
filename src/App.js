@@ -40,7 +40,7 @@ function App() {
 
   const bodyVariant ={
     leftBarOpen: {
-      marginLeft: isOpen ? 310 : 60,
+      marginLeft: isOpen ? 300 : 50,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -49,7 +49,7 @@ function App() {
     },
 
     leftBarOff: {
-      marginLeft: 60,
+      marginLeft: 50,
       transition :{
         duration: 0.5,
         type: 'tween',
@@ -110,7 +110,7 @@ function App() {
         <div className="all-category">
           {
             menu.map((menu) =>(
-              <NavLink className="list"  to={menu.path}>
+              <NavLink className="list" key={menu.title} to={menu.path}>
                 <FontAwesomeIcon className="listIcon" icon={menu.icon}/>
                 <AnimatePresence>
                 {isOpen && <motion.div className="title"

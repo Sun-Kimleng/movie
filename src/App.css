@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 :root{
-  --black: #042f40;
+  --black: #490B3D;
+  --yellow: #F1B814;
 }
 
 .content{
@@ -19,20 +20,19 @@
   height: 100vh;
   width: 20%;
   position: fixed;
-  background-color: #eb6b09;
+  background-color: #BD1E51;
  
   
 }
 
 .body{
-  height: 100vh;
   flex: 1;
   
 }
 
 .Icon{
   margin-top: 50px;
-  color: black;
+  color: white;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -43,6 +43,7 @@
   margin-right: 11px;
   font-size: 25px;
   width: 30px;
+  color: var(--black);
 }
 
 .all-category{
@@ -54,7 +55,6 @@
   display: flex;
   flex-direction: row;
   height: 20px;
-
   padding: 20px 13px;
   text-decoration: none;
   color: black;
@@ -63,11 +63,14 @@
 .title{
   margin-left: 20px;
   font-size: 20px;
+  color: var(--black);
 }
 
 .active{
   background-color: orange;
 }
 .body{
-  margin-top: 50px;
+  margin-left: -5px;
+  margin-top: 48px;
+  background-color: var(--yellow);
 }
