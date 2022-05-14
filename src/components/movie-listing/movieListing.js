@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import {Link} from 'react-router-dom';
 import { getAllMovie } from '../../features/movies/movieSlice';
 import './movieListing.css';
 
@@ -13,9 +14,11 @@ const MovieListing = () => {
                 movies.map((movie, index)=>(
                     <div className="key" key={index}>
                         <div className="movie-card">
-                            <div className="poster">
-                                <img src={movie.Poster} />
-                            </div>
+                            <Link to=" " className="poster">
+                                <img className="poster-image" src={movie.Poster} />
+                                <div className="titlle">{movie.Title}</div>
+                                <div className="year">{movie.Year}</div>
+                            </Link>
                         </div>
                     </div>
                 ))
