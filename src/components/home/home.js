@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
 import {ApiKey} from '../../common/apis/movieApiKey';
 import movieApi from "../../common/apis/movieApi";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MovieListing from "../movie-listing/movieListing";
-import { addMovie, fetchAsyncMovies } from "../../features/movies/movieSlice";
+import { addMovie, fetchAsyncMovies, fetchAsyncShow, isPending } from "../../features/movies/movieSlice";
 import './home.css'
+import ShowListing from "../show-listing/show-listing";
 
 const Home = () => {
 
     //use dispatch to update the state (interactive with actions)
     const dispatch = useDispatch();
-
-    const [isPending, setIsPending] = useState(true);
     
     useEffect(()=>{ 
         dispatch(fetchAsyncMovies());
-        
-    },[]);
+        dispatch(fetchAsyncShow())
+    },[dispatch]);
 
+   
     return ( 
         
         <div className="home">
             {/* {isPending &&<div className="spinner-parent"><div className="parent"> <div className="spinner"></div></div></div>} */}
-
+            <h2 className="movie"><div className="movie-label">Movies</div></h2>
             <MovieListing />
+            <h2 className="show"><div className="movie-label">Shows</div></h2>
+            <ShowListing />
         </div>
     );
 }

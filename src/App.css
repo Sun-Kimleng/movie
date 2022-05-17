@@ -21,6 +21,7 @@
   width: 20%;
   position: fixed;
   background-color: #BD1E51;
+
  
   
 }
@@ -70,10 +71,36 @@
   background-color: orange;
 }
 .body{
+  overflow: hidden;
   margin-left: -5px;
   margin-top: 48px;
   background-color: var(--yellow);
+
+  
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #BD1E51; 
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orchid; 
+}
+
 
 
 

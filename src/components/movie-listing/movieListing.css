@@ -26,6 +26,7 @@
 .poster:hover{
     transform: scale(1.02);
     box-shadow: 5px 5px 5px black;
+    
 }
 
 .poster-image{
@@ -36,7 +37,7 @@
 
 
 .titlle, .year{
-    padding: 3px 10px;
+    
     color: black;
     font-size: 14px;
 }
