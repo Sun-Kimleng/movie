@@ -1,0 +1,19 @@
+:root{
+    --black: #490B3D;
+    --yellow: #F1B814;
+  }
+
+.footer{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-size: 12px;
+    background-color: var(--black);
+}
+.linkk{
+    text-decoration: none;
+    color: white;
+}

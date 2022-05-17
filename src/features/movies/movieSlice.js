@@ -59,6 +59,11 @@ const movieSlice = createSlice({
         },
         setIsPending: (state, payload)=>{
             state.isPending = payload;
+        },
+
+        //clearn up action
+        cleanUpMovie: (state)=>{
+            state.movies = {};
         }
     },
     //for creating function (usefull for fetching data)
@@ -109,7 +114,7 @@ const movieSlice = createSlice({
 );
 
 //export actions
-export const {setIsPending, addMovie} = movieSlice.actions;
+export const {setIsPending, addMovie, cleanUpMovie} = movieSlice.actions;
 
 //export the reducer
 export default movieSlice.reducer;

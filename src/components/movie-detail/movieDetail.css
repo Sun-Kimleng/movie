@@ -14,7 +14,7 @@
   text-align: justify;
 }
 .movie-detail{
- padding-right: 10px;
+ padding-right: 30px;
 }
 
 .tittle{
@@ -93,6 +93,9 @@
    .desc{
      padding: 0px;
    }
+   .movie-detail{
+    padding-right: 0px;
+   }
    
 
 }
@@ -110,9 +113,7 @@
      width: 80%;
      
    }
-   .movie-detail{
-    padding-right: 0px;
-   }
+   
 
   .detail-container{
     padding: 15px;
