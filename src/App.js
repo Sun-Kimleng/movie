@@ -41,6 +41,7 @@ function App() {
   const bodyVariant ={
     leftBarOpen: {
       marginLeft: isOpen ? 300 : 50,
+      overflow: isOpen ? 'hidden': 'visible',
       transition :{
         duration: 0.5,
         type: 'tween',

@@ -6,12 +6,16 @@ import MovieListing from "../movie-listing/movieListing";
 import { addMovie, fetchAsyncMovies, fetchAsyncShow, isPending } from "../../features/movies/movieSlice";
 import './home.css'
 import ShowListing from "../show-listing/show-listing";
+import { DocTitle } from "../../docTitle";
+
+
 
 const Home = () => {
-
+    DocTitle('Home');
+    
     //use dispatch to update the state (interactive with actions)
     const dispatch = useDispatch();
-    
+  
     useEffect(()=>{ 
         dispatch(fetchAsyncMovies());
         dispatch(fetchAsyncShow())

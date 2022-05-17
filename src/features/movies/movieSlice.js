@@ -63,20 +63,17 @@ const movieSlice = createSlice({
     },
     //for creating function (usefull for fetching data)
     extraReducers: {
-        //function name
         //movies
         [fetchAsyncMovies.pending]: ()=>{
             console.log('it is pending');
            
         },
-
         [fetchAsyncMovies.fulfilled]: (state, {payload})=>{
             console.log('succesfully');
             
             //it the same as state.movies=payload
             return {...state, movies: payload };
         },
-
         [fetchAsyncMovies.rejected]: ()=>{
             console.log('rejected');
         },
@@ -86,14 +83,12 @@ const movieSlice = createSlice({
             console.log('it is pending');
            
         },
-
         [fetchAsyncShow.fulfilled]: (state, {payload})=>{
             console.log('succesfully');
             
             //it the same as state.movies=payload
             return {...state, shows: payload };
         },
-
         [fetchAsyncShow.rejected]: ()=>{
             console.log('rejected');
         },
