@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import {Link} from 'react-router-dom';
 import { getAllMovie } from '../../features/movies/movieSlice';
+import React from 'react';
 import './movieListing.css';
+import { Pagination } from '@mui/material';
+import MakePagination from '../makePagination';
 
 const MovieListing = () => {
 
@@ -9,13 +13,27 @@ const MovieListing = () => {
     const movies = useSelector(getAllMovie);
     console.log(movies);
 
-   
+    //create pagination
+    
+    //page state
+    const [currentPage, setCurrentPage]=useState(1);
+    const [postPerPage, setPostPerPage]=useState(6);
+    
+    // create UI for Pagination click
+    const totalPost= movies.Search && movies.Search.length;
+    const totalPage= Math.ceil(totalPost/postPerPage);
+
+    //calculate
+    const indexOfLastPostInCurrentPage = currentPage * postPerPage;
+    const indexOfFirstPostInCurrentPage = indexOfLastPostInCurrentPage - postPerPage;
+    const currentPost = movies.Search && movies.Search.slice(indexOfFirstPostInCurrentPage, indexOfLastPostInCurrentPage);
 
     if(movies.Response === 'True'){
     return ( 
+        <div>
         <div className="movie-listing">
             {
-                movies.Search.map((movie, index)=>(
+                currentPost.map((movie, index)=>(
                     <div className="key" key={index}>
                         <div className="movie-card">
                             <Link to={`/movie/${movie.imdbID}`} className="poster">
@@ -27,6 +45,8 @@ const MovieListing = () => {
                     </div>
                 ))
             }
+        </div>
+            <MakePagination  totalPost={totalPost} totalPage={totalPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </div>
      );
     }else{
