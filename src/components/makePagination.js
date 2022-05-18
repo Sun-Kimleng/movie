@@ -14,7 +14,7 @@ const MakePagination = ({totalPage, totalPost, currentPage, setCurrentPage}) => 
 
     return ( 
         <div className="Make-pagination">
-            <Pagination count={totalPage} page={currentPage}  onChange={(e, value)=>changePage(value)} showFirstButton showLastButton  />
+            <Pagination count={totalPage} page={currentPage}  onChange={(e, value)=>{changePage(value);}} showFirstButton showLastButton  />
         </div>
      );
 }
